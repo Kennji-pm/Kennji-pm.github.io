@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+body {
+  background-color: #101012;
+  max-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  padding: 40px 100px;
+  z-index: 10;
+}
+nav.sticky {
+  padding: 20px 110px;
+  background: #fff;
+}
+nav > a {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  position: relative;
+  list-style: none;
+}
+nav ul li a {
+  position: relative;
+  margin: 0 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+nav.sticky > a,
+nav.sticky ul li a {
+  color: #000;
+}
+.about-page {
+  padding: 50px;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.about-page .content {
+  width: 45%;
+}
+footer .content {
+  width: 100%;
+  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  .links {
+    a {
+      color: #fff;
+      margin-right: 10px;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #ccc;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 20px 25px;
+  }
+  nav > a {
+    font-size: 15px;
+  }
+  nav.sticky {
+    padding: 20px 25px;
+  }
+  nav ul {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0px 5px;
+  }
+  .about-page {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .content {
+    display: flex;
+    flex-direction: column;
+  }
+}

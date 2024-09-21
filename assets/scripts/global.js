@@ -10,18 +10,32 @@ hamburger.addEventListener("click", function () {
   document.querySelector(".navbar").classList.toggle("active");
 });
 
-// play_btn = document.querySelector(".play-btn");
+playJava = document.getElementById("playJava");
+playBedrock = document.getElementById("playBedrock");
 
-// play_btn.addEventListener("click", function () {
-//   window.location.href =
-//     "minecraft://?addExternalServer=NightfallAssault - Network|animeisekai.com:19132";
-// });
+playBedrock.addEventListener("click", function () {
+  window.location.href =
+    "minecraft://?addExternalServer=NightfallAssault - Network|play.nightfallassault.net:19132";
+});
+playJava.addEventListener("click", function () {
+  navigator.clipboard.writeText("play.nightfallassault.net");
+  playJava.textContent = "Copied to your clipboard.";
+});
 
 var modal = document.getElementById("selectPlatformModal");
 var btn = document.getElementById("playBtn");
 var span = document.getElementsByClassName("close")[0];
 btn.onclick = function () {
-  modal.style.display = "block";
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    window.location.href =
+      "minecraft://?addExternalServer=NightfallAssault - Network|play.nightfallassault.net:19132";
+  } else {
+    modal.style.display = "block";
+  }
 };
 span.onclick = function () {
   modal.style.display = "none";

@@ -9,8 +9,9 @@ window.addEventListener("load", function () {
   var playerOnline = this.document.getElementById("player-online");
   var serverVersion = this.document.getElementById("server-version");
   serverData.then(function (data) {
-    playerOnline.textContent =
-      String(data.players.online) + "/" + String(data.players.max);
+    playerOnline.textContent = String(
+      data.players.online + "/" + data.players.max
+    );
     serverVersion.textContent = data.version;
   });
 });

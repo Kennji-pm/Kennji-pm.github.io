@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <title>NightfallAssault - Minecraft Server Java + Bedrock</title>
+    <title>NightfallAssault - Network</title>
   </head>
   <body>
     <!-- NavBar -->
@@ -24,11 +24,24 @@
       <a href="#" class="animate__animated animate__fadeInLeft"
         >NightfallAssault</a
       >
-      <ul class="animate__animated animate__fadeInRight">
-        <li><a href="#">About</a></li>
-        <li><a href="#">How to join?</a></li>
-        <li><a href="#">Vote</a></li>
-      </ul>
+      <div id="hamburger" class="animate__animated animate__fadeInRight">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="navbar">
+        <ul class="animate__animated animate__fadeInRight">
+          <li><a href="#about">About</a></li>
+          <li><a href="#how-to-join">How to join?</a></li>
+          <li>
+            <a
+              href="https://minecraftpocket-servers.com/country/vietnam/"
+              target="_blank"
+              >Vote</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
     <!-- About -->
     <section id="about">
@@ -38,30 +51,40 @@
             <h2>NightfallAssault</h2>
           </div>
           <div class="description">
-            <p>
-              NightfallAssault is a Minecraft server dedicated to hosting and
-              playing the game with the latest updates. The server features an
-              immersive, open-world environment, multiple game modes, and a
-              vibrant community.
-            </p>
+            <p>Máy chủ Minecraft Java Bedrock.</p>
           </div>
+          <button id="playBtn" class="Btn">Play Now</button>
         </div>
         <div class="servers">
           <div class="server-items">
             <div class="item">
               <h3>Online</h3>
-              <p id="player-online">Pending...</p>
+              <p id="player-online">Fetching...</p>
             </div>
             <div class="item">
               <h3>Version</h3>
-              <p id="server-version">Pending...</p>
+              <p id="server-version">Fetching...</p>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- How To Join -->
-    <section></section>
+    <section id="how-to-join"></section>
+    <!-- The Modal -->
+    <div id="selectPlatformModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="top">
+          <h2>Select Platform</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="middle">
+          <button class="Btn">Minecraft Java</button>
+          <button class="Btn">Minecraft Bedrock</button>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer>
       <div class="content">

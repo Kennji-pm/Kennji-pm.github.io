@@ -1,5 +1,5 @@
 async function getServerData() {
-  let url = "https://api.mcsrvstat.us/3/indramc.com";
+  let url = "https://api.mcsrvstat.us/3/play.nightfallassault.net";
   const response = await fetch(url);
   const jsonData = await response.json();
   return jsonData;
